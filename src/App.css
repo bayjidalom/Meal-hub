@@ -1,0 +1,21 @@
+.nav-container {
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
