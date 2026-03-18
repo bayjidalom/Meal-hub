@@ -1,29 +1,28 @@
-
+import { Suspense } from 'react'
 import './App.css'
+import FoodSection from './components/FoodSection/FoodSection'
+import Navbar from './components/Navbar/Navbar'
+
+
+const foodDataRes = fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+  .then(res => res.json())
 
 
 function App() {
 
-
   return (
     <>
-    <nav className='nav-container'>
-      <div className='nav-left'>
-        <img src="" alt="" />
-        <p>Meal Hub</p>
-      </div>
 
-      <div className='nav-right'>
-        <p>Home</p>
-        <p>About</p>
-        <p>Contact</p>
-        <p>Orders</p>
-        <p>Home</p>
-      </div>
+      <Navbar></Navbar>
 
-    </nav>
+      <Suspense fallback={<p>Loading....</p>}>
 
-    
+        <FoodSection foodDataRes={foodDataRes}></FoodSection>
+
+      </Suspense>
+
+
+
     </>
   )
 }

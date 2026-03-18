@@ -1,16 +1,24 @@
+
 .nav-container {
-    background-color: bisque;
+    background-color: rgba(255, 228, 196, 0.534);
     display: flex;
     justify-content: space-between;
-    padding: 13px;
+    padding: 10px;
     align-items: center;
-}
+    border-bottom: 1px solid rgba(128, 128, 128, 0.699);
+    
 
 .nav-left {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     align-items: center;
+}
+
+.nav-left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .nav-right {
